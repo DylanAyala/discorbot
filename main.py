@@ -17,4 +17,4 @@ async def on_message(message):
     if message.content.startswith('$gato'):
         await message.channel.send('<@355496877241794560>', file=discord.File('capi.mp3', 'capi.mp3'))
 
-client.run('NzMyNzEzNjMxNTk4Mzc5MDk1.Xw4n7Q.G6uI-couB3ncfUByloPEvsgEBz4')
+client.run('token')
