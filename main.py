@@ -3,6 +3,7 @@ import youtube_dl
 from discord.ext import commands
 import os
 from discord.utils import get
+import time
 
 client = commands.Bot(command_prefix='$')
 players= {}
@@ -23,6 +24,7 @@ async def gato(ctx):
 async def gatoa(ctx):
     voice = await ctx.message.author.voice.channel.connect()
     await voice.play(discord.FFmpegPCMAudio("audio/capi.mp3"))
+    time.sleep(5)
     await voice.disconnect()
 
 @client.command(pass_context=True)        
@@ -33,6 +35,8 @@ async def all(ctx):
 async def all2(ctx):
     voice = await ctx.message.author.voice.channel.connect()
     voice.play(discord.FFmpegPCMAudio("audio/allp.mp3"))
+    time.sleep(5)
+    await voice.disconnect()
     
 
 @client.command(pass_context=True)        
